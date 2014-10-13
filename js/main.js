@@ -27,3 +27,22 @@ $(function() {
         }
     });
 });
+
+
+ $(document).ready(function(){
+    $(".toggle-button").next("ul").hide();
+    $(".toggle-button").click(function(){
+        $(".toggle-button").next("ul").slideToggle();
+    });
+});
+
+
+ $(function () {
+    $(".slider").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks"
+    });
+}); 
