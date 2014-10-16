@@ -9,46 +9,15 @@ Globals
     @return #{$remSize}rem;
 }
 
-/* latin */
-@font-face {
-  font-family: 'Changa One';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Changa One'), local('ChangaOne'), url(http://fonts.gstatic.com/s/changaone/v9/QmTOgNNWM9ly3K3B2X29HAsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Marvel';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Marvel'), local('Marvel-Regular'), url(http://fonts.gstatic.com/s/marvel/v6/SaDGI2q_wQdiZ5UjkSW2Zn-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Marvel';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Marvel Bold'), local('Marvel-Bold'), url(http://fonts.gstatic.com/s/marvel/v6/fdSK0BiCsJzg1JgCoZQLEYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Marvel';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Marvel Italic'), local('Marvel-Italic'), url(http://fonts.gstatic.com/s/marvel/v6/VBV-2FFdWZ4G6nEDL5-6oxkAz4rYn47Zy2rvigWQf6w.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
+
 
 // Site variable
-$color: #000;
-$background-color: #fff;
+$color: #fff;
+$background-color: #000;
 $background-color-alternate: #a3a3a3;
 $background-center: #000;
-$menu-color: #2bd8bb;
-$nightlife-color: #5effc1;
+$menu-color: #ff27c3;
+$nightlife-color: #ff1934;
 
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin fontSize($size) {
@@ -57,25 +26,25 @@ $nightlife-color: #5effc1;
 }
 
 @mixin body-font-regular {
-    font-family: "Marvel", georgia, serif;
+    font-family: "acta-display", georgia, serif;
     font-style: normal;
     font-weight: 300;
 }
 
 @mixin body-font-italic {
-    font-family: "Marvel", georgia, serif;
+    font-family: "acta-display", georgia, serif;
     font-style: italic;
     font-weight: 300;
 }
 
 @mixin body-font-bold {
-    font-family: "Marvel", georgia, serif;
+    font-family: "acta-display", georgia, serif;
     font-style: normal;
     font-weight: 700;
 }
 
 @mixin headline-font {
-    font-family: "Changa One", helvetica, verdana, sans-serif;
+    font-family: "Hotel-Open", helvetica, verdana, sans-serif;
     font-style: normal;
     font-weight: 400;
 }

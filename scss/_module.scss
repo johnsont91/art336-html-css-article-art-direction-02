@@ -32,7 +32,7 @@ nav[role="navigation"] ul a {
     border: 3px solid $color;
     color: $color;
     display: inline-table;
-    @include fontSize(30px);
+    @include fontSize(50px);
     @include body-font-regular;
     margin-left: 8px;
     margin-top: 4px;
@@ -48,13 +48,89 @@ nav[role="navigation"] ul a:hover {
     transition: border 400ms linear;
     transition: color 400ms linear;
 }
-
-banner-headline h1 {
-    @include body-font-bold;
-    @include fontSize(300px);
-    
+.banner-headline h1 {
+    @include headline-font;
+    @include fontSize(200px);
+    margin-top: -50px;
 }
+
 
 .about ul li img {
      border: 10px solid lighten($color, 0%);      
 }
+
+// Parallax Effect Element
+  .debug {
+    position: fixed;
+    top: 0;
+    left: .5em;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .debug-on .parallax__group {
+    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+ }
+  .debug-on .parallax__layer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+  }
+  .parallax__group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+// Styling for the Parallaxing Groups
+
+ #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+  #group1 .parallax__layer--base {
+   // background: rgb(102,204,102);
+  }
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+  #group2 .parallax__layer--back {
+   // background: rgb(0, 0, 0);
+  }
+
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+  #group3 .parallax__layer--base {
+   // background: rgb(153,216,101);
+      text-align: center;
+  }
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+  #group4 .parallax__layer--deep {
+    background: rgb(181, 181, 181);
+  }
+
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+  }
+  #group5 .parallax__layer--base {
+    background: rgb(141, 141, 141);
+  }
+
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+  }
+  #group6 .parallax__layer--back {
+    background: rgb(255, 255, 255);
+  }
+
+  #group7 {
+    z-index: 3; /* slide over group 7 */
+  }
+  #group7 .parallax__layer--base {
+    background: rgb(100, 100, 100);
+  }
