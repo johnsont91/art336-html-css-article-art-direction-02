@@ -11,6 +11,8 @@ Layout Rules
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+     width: 100%;
+    max-width: 960px;
   }
 
 .parallax {
@@ -20,6 +22,8 @@ Layout Rules
     overflow-y: auto;
     -webkit-perspective: 300px;
     perspective: 300px;
+    width: 100%;
+    max-width: 960px;
   }
 
   .parallax__group {
@@ -28,6 +32,8 @@ Layout Rules
     height: 100vh;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+      width: 100%;
+    max-width: 960px;
   }
 
   .parallax__layer {
@@ -36,30 +42,42 @@ Layout Rules
     left: 0;
     right: 0;
     bottom: 0;
+      width: 100%;
+    max-width: 960px;
   }
 
   .parallax__layer--fore {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
+      width: 100%;
+    max-width: 960px;
   }
 
   .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
+      width: 100%;
+    max-width: 960px;
+      
   }
+
 
   .parallax__layer--back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
+    width: 100%;
+    max-width: 960px;
   }
 
   .parallax__layer--deep {
     -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
+    width: 100%;
+    max-width: 960px;
   }
 
 //End of Parallax elements
@@ -88,16 +106,17 @@ nav[role="navigation"] ul li {
     padding: 0;
 }
 
-.banner-mp4 {
+.banner video {
     width: 100%;
     height: auto;
+    width: 100%;
     max-width: 960px;
 }
 
-.banner-mp4 video {
-    width: 100%;
-}
 
+.video {
+    text-align: center;   
+}
 .about ul li {
     list-style-type: none;
     width: 100%;
@@ -124,12 +143,16 @@ nav[role="navigation"] ul li {
     @include fontSize(30px);
     text-align: center;
 }
-
+.banner-subline h3 {
+    @include body-font-italic;
+    @include fontSize(80px);
+    color: #ea75ff;
+}
 .attractions h1 {
     text-align: center;   
     @include body-font-bold;   
-    @include fontSize(100px);
-    color: $menu-color;
+    @include fontSize(90px);
+    color: #ed65ff;
 }
 .attractions img {
      max-width: 100%;

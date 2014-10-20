@@ -22,26 +22,19 @@ body, html {
     @include fontSize(20px);
     padding: 0 8px;
     margin: 0 auto;
-    max-width: 1080px;
     width: 100%;
   }
 
-  * {
-    margin:0;
-    padding:0;
-  }
+
+// Parallax Base Styles
 
   .parallax {
-    font-size: 200%;
-  }
-// Parallax Base Styles
-  .parallax {
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 300px;
-    perspective: 300px;
+            height: 500px; /* fallback for older browsers */
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-perspective: 300px;
+            perspective: 300px;
   }
 
   .parallax__group {
@@ -117,3 +110,12 @@ identity-headline {
     
 }
 
+.attraction-headline h1 {
+    text-align: left; 
+    @include fontSize(70px);
+    @include body-font-regular;
+    animation: colorchange-red 10s linear 1s infinite alternate;
+    transition: border 1000ms linear;
+    transition: color 1000ms linear;
+    width: 100%;
+}

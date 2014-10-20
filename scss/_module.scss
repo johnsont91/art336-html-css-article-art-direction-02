@@ -14,14 +14,14 @@ Module Rules
     text-decoration: none;
 }
 .toggle-button svg path {
-       fill: $menu-color;
-        animation: colorchange-font 5s linear 1s infinite alternate;
-        transition: color 400ms linear;
+    fill: $menu-color;
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    transition: color 400ms linear;
 }
 
 .toggle-button a:hover svg path {
-       fill: darken($background-color, 12%);
-        transition: fill 400ms linear;
+    fill: darken($background-color, 12%);
+    transition: fill 400ms linear;
 }
 
 nav[role="navigation"] ul {
@@ -29,10 +29,10 @@ nav[role="navigation"] ul {
 }
 
 nav[role="navigation"] ul a {
-    border: 3px solid $color;
-    color: $color;
+    border: 3px solid #71ffae;
+    color: #000;
     display: inline-table;
-    @include fontSize(50px);
+    @include fontSize(20px);
     @include body-font-regular;
     margin-left: 8px;
     margin-top: 4px;
@@ -52,15 +52,31 @@ nav[role="navigation"] ul a:hover {
     @include headline-font;
     @include fontSize(200px);
     margin-top: -50px;
-}
+    animation: colorchange-font 10s linear 1s infinite alternate;
+    transition: border 400ms linear;
+    transition: $menu-color 400ms linear;
+} 
 
+
+.banner-subline2 h4 {
+    @include headline-font;
+    @include fontSize(150px);
+    animation: colorchange-font 10s linear 1s infinite alternate;
+    transition: border 400ms linear;
+    transition: $nightlife-color 400ms linear;
+} 
+
+.attraction h1 {
+    @include headline-font;
+    @include fontSize(130px);
+}
 
 .about ul li img {
      border: 10px solid lighten($color, 0%);      
 }
 
 // Parallax Effect Element
-  .debug {
+/*<!-- .debug {
     position: fixed;
     top: 0;
     left: .5em;
@@ -81,7 +97,7 @@ nav[role="navigation"] ul a:hover {
   .parallax__group {
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-  }
+  } */
 
 // Styling for the Parallaxing Groups
 
@@ -99,6 +115,7 @@ nav[role="navigation"] ul a:hover {
    // background: rgb(0, 0, 0);
   }
 
+
   #group3 {
     z-index: 4; /* slide over group 2 and 4 */
   }
@@ -111,26 +128,26 @@ nav[role="navigation"] ul a:hover {
     z-index: 2; /* slide under group 3 and 5 */
   }
   #group4 .parallax__layer--deep {
-    background: rgb(181, 181, 181);
+  //  background: rgb(181, 181, 181);
   }
 
   #group5 {
     z-index: 3; /* slide over group 4 and 6 */
   }
   #group5 .parallax__layer--base {
-    background: rgb(141, 141, 141);
+  //  background: rgb(141, 141, 141);
   }
 
   #group6 {
     z-index: 2; /* slide under group 5 and 7 */
   }
   #group6 .parallax__layer--back {
-    background: rgb(255, 255, 255);
+  //  background: rgb(255, 255, 255);
   }
 
   #group7 {
     z-index: 3; /* slide over group 7 */
   }
   #group7 .parallax__layer--base {
-    background: rgb(100, 100, 100);
+   // background: rgb(100, 100, 100);
   }

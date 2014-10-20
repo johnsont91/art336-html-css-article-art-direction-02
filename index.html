@@ -14,9 +14,6 @@
 
 <body class="debug-on">
 
-  <div class="debug">
-    <label><input type="checkbox">Split-a-me-Open</label>
-  </div>
 
 
   <div class="parallax">
@@ -27,50 +24,74 @@
             <nav role="navigation">
                 <a href="#" class="toggle-button">
 </a>
+                
         <ul>
-                <li><a href="#about">History</a></li>
-                <li><a href="#attractions">Attractions</a></li>
-                <li><a href="#restaurants">Restaurants</a></li>
-                <li><a href="#nightlife">Nightlife</a></li>
-                <li><a href="#hotels">Hotels</a></li>
+                <!--
+
+<li><a href="#about"><span>HISTORY</span></a></li>
+
+-->
+                <li><a href="#attractions"><span>ATTRACTIONS</span></a></li>
+                <li><a href="#restaurants"><span>RESTAURANTS</span></a></li>
+                <li><a href="#nightlife"><span>NIGHTLIFE</span></a></li>
         </ul>
         </nav>
           
         <header role="banner">
                 <div class="banner-headline">
-                    <h1 id="banner-headline">                                                   BALTIMORE</h1>
-                        <h3 id="banner-subline"><span>INNER HARBOR</span></h3>
+                    <h1 id="banner-headline"><span>BALTIMORE</span></h1>
                 
       </div>
     </div>
       </header>
-        
+        <!--Base Layer-->
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="title"></div>
       </div>
         
+        
+        <!--background Layer-->
       <div class="parallax__layer parallax__layer--back">
-        <div class="banner"></div>
-          <video src="/art336-html-css-article-art-direction-02/img/banner-mp4.mp4" loop autoplay>HTML5 Video is required for this example</video> 
+        <div class="banner"><video src="/art336-html-css-article-art-direction-02/img/banner-mp4.mp4" loop autoplay>HTML5 Video is required for this example</video> </div>
+          
       </div>
     </div>
-      
+        
+        
+        <!--Foreground Layer-->
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
+        <div class="banner-subline">
+            <!-- <h3 id="banner-subline"><span>INNER</span></h3> -->
+          
+          </div>
       </div>
+        <!--Foreground Layer-->
+        
         
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base layer</div>
+        <div class="banner-subline2"><h4 id="banner-subline2"><span>HARBOR</span></h4></div>
       </div>
     </div>
-
+<!--Foreground Layer-->
+        
+        
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
+          
+        <div class="attraction-headline">
+            <div class="title"><h1 class="attraction-headline"><span>ATTRACTIONS</span></h1>
+            
+            </div></div>
           <div class="clickme">
-        <p><a href="http://en.wikipedia.org/wiki/History_of_Baltimore" target="_blank">History Of Baltimore</a></p>
+        <a id="#about"></a>
+              <div class="video">
+              <!--<iframe width="560" height="315" src="//www.youtube.com/embed/9ReqkAzKX6c" frameborder="3" loop autoplay allowfullscreen></iframe>-->
+              </div>
+              <p>
+            
+            <!--<a href="http://en.wikipedia.org/wiki/History_of_Baltimore" target="_blank">History Of Baltimore</a></p>
                     </div>
                  
           <a id="about"></a>
@@ -79,8 +100,8 @@
             <section class="about">
                 <h1 id="identity-headline">
  
-                  
-    <ul>
+                  <div class="callbacks_container">
+                <ul class="rslides slider">  
         <li>
                 <img src="/art336-html-css-article-art-direction-01/img/bmoreraid.png" alt="">
             </li>
@@ -90,33 +111,36 @@
         <li>
                 <img src="/art336-html-css-article-art-direction-01/img/bethship.jpg" alt="">
             </li>
-    </ul>   
+    </ul>  </div>
                 <div class="clickmetext">                   
  <p>From family-friendly museums and restaurants to satisfy every palate, to exciting nightlife, cultural experiences and spectacular people-watching, Baltimore’s Inner Harbor offers more to see and do than you can imagine.</p>
-                    
+                    -->
         </div>
       </div>
         
       <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
+        <div class="title">to baltimore.</div>
       </div>
       <div class="parallax__layer parallax__layer--deep">
-        <div class="title">Deep Background Layer</div>
+        <div class="title">welcome.</div>
+           <div class="banner-subline"> <h3 id="banner-subline"><span>INNER</span></h3>
       </div>
     </div>
       
     <div id="group5" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-        
+        <div class="blockyshit">
+          <img src="/art336-html-css-article-art-direction-02/img/attractions.png">
+          </div>
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
+        
+            <div class="attraction"></div>
+      </div>
             <section role="attractions">
         <div class="attractions">
             <a id="attractions"></a>
-                <img src="/art336-html-css-article-art-direction-01/img/attract.jpg">
-                    <h1 class="attraction-headline"><span>ATTRACTIONS</span></h1>
+               <!-- <img src="/art336-html-css-article-art-direction-01/img/attract.jpg">-->
+    
 
     </section>
       </div>
@@ -124,41 +148,44 @@
       
     <div id="group6" class="parallax__group">
       <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
+        <div class="title"></div>
       </div>
         
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
+        
           
 <a id="restaurants"></a>
     <section class="restaurants">
         <h1 id="restaurant-headline"><span>RESTAURANTS</span></h1>
             <h2>yum...</h2>
-                <img src="/art336-html-css-article-art-direction-01/img/filet.jpg"/>
-        <br>
-        <small>@Copyright 2014 Johnson Photography</small>
-                <img src="/art336-html-css-article-art-direction-01/img/calimari.jpg"/>
-        <br>
-        <small>@Copyright 2014 Johnson Photography</small>
+        
+        
+        <div class="callbacks_container">
+                <ul class="rslides slider">
+                    
+                <li>
+                    <img src="/art336-html-css-article-art-direction-01/img/filet.png"/>
+        <p class="caption">Filet Mignon - Clydes</p>
+                    </li>
+                <li><img src="/art336-html-css-article-art-direction-01/img/calimari.png"/>
+        <p class="caption">Fried Calimari - Pasta Blitz</p></li>
 
-                <img src="/art336-html-css-article-art-direction-01/img/pizza.jpg"/>
-        <br>
-        <small>@Copyright 2014 Johnson Photography</small>
+               <li> <img src="/art336-html-css-article-art-direction-01/img/pizza.png"/>
+        <p class="caption">Fresh Pizza - Pasta Blitz</p></li>
         
 </section>
       </div>
     </div>
       
-    <div id="group7" class="parallax__group">
+ <!--   <div id="group7" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-           <a id="nightlife"></a>
+      <!--  <div class="title">           <a id="nightlife"></a>
         <section class="nightlife">
-            <hr>
+
             <h1 id="nightlife-headline"><span>Nightlife</span></h1> 
-            <hr>
+    
             <div class="nightlife">
-            <iframe width="560" height="315" src="//www.youtube.com/embed/9ReqkAzKX6c" frameborder="3" allowfullscreen></iframe>
+            
                 <h2>PLACE</h2>
                     <img src=""/>
             <p>lorem ipsume blackfaksdfa</p>
@@ -179,11 +206,10 @@
                     <img src=""/>
             <p>some shit about place</p>
             
-                        </section>
-      </div>
-    </div>
-  </div>
+                        </section></div> -->
 
+   
+<!-- This Project is still underconstruction -->
         
             </div>
 

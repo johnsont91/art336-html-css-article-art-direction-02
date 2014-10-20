@@ -18,6 +18,7 @@ $background-color-alternate: #a3a3a3;
 $background-center: #000;
 $menu-color: #ff27c3;
 $nightlife-color: #ff1934;
+$nightlife-color-alternate: #ff8b97;
 
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin fontSize($size) {
@@ -59,4 +60,10 @@ $nightlife-color: #ff1934;
        0% { color: $background-color; }
        50% { color: $background-color-alternate; }
        100% { color: $background-color; }
+}
+
+@keyframes colorchange-red {
+       0% { color: $nightlife-color; }
+       50% { color: $nightlife-color-alternate; }
+       100% { color: $nightlife-color; }
 }

@@ -26,6 +26,7 @@ $(function() {
             $('#attraction-headline').bigtext();
             $('#banner-headline').bigtext();
             $('#restaurant-headline').bigtext();
+            $('#banner-subline2').bigtext();
         }
     });
 });
@@ -35,7 +36,7 @@ $(function() {
 }); 
 
 
-/* $(document).ready(function(){
+ /* $(document).ready(function(){
     $(".toggle-button").next("ul").hide();
     $(".toggle-button").click(function(){
         $(".toggle-button").next("ul").slideToggle();
