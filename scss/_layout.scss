@@ -3,181 +3,68 @@ Layout Rules
     CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles.
     Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across all components of the page and use class selectors where appropriate.
 */
-// Parallax Elements
- .title {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-     width: 100%;
-    max-width: 960px;
-  }
-
-.parallax {
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 300px;
-    perspective: 300px;
-    width: 100%;
-    max-width: 960px;
-  }
-
-  .parallax__group {
-    position: relative;
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-      width: 100%;
-    max-width: 960px;
-  }
-
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-      width: 100%;
-    max-width: 960px;
-  }
-
-  .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-      width: 100%;
-    max-width: 960px;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 4;
-      width: 100%;
-    max-width: 960px;
-      
-  }
 
 
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2);
-    z-index: 3;
-    width: 100%;
-    max-width: 960px;
-  }
 
-  .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
-    width: 100%;
-    max-width: 960px;
-  }
 
-//End of Parallax elements
-
-// Group Styling
-
-//Nav Layout
 nav[role="navigation"] {
-    
-    margin-top: 20px;
-    margin-bottom: 70px;
-    text-align: center;
-    top:0;
-    left:0;
-    width:100%;
-    
+    text-align: left;   
 }
-nav[role="navigation"] ul {
+nav[role="navigation"] ul, .contact ul {
     list-style-type: none;
-    margin: 12px 0 0 0;
+    margin: 0;
     padding: 0;
 }
-nav[role="navigation"] ul li {
+
+nav[role="navigation"] ul {
+    margin-top: 12px;
+
+}
+
+nav[role="navigation"] ul li, .contact ul li {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
 
-.banner video {
-    width: 100%;
-    height: auto;
-    width: 100%;
+header[role="banner"] {
+    margin: 30px 0 100px 0;
+  //  @media (min-width: 700px) {
+  //      float: left;
+    //    width: 35%;
+  //  }
+ //   @media (min-width: 600px) {
+  //      width: 50%;
+  //  }
+}
+
+.banner-photo {
+    text-align: center;  
+}
+.banner-photo img {
+    width: 100%; 
     max-width: 960px;
 }
 
-
-.video {
+.attraction-headline h2 {
     text-align: center;   
-}
-.about ul li {
-    list-style-type: none;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: inline-block;
-}
-.about ul li img {
-    max-width: 540px;
-    max-height: 340px;
-    margin-top: none;
-    padding: -5px;
-}
-.banner-headline h1 {
-    text-align: center; 
-    margin-bottom: 50px;
 }
 
-.clickme p {
-    text-align: center;   
-}
-.clickmetext p {
-    @include body-font-regular;  
-    @include fontSize(30px);
-    text-align: center;
-}
-.banner-subline h3 {
-    @include body-font-italic;
-    @include fontSize(80px);
-    color: #ea75ff;
-}
-.attractions h1 {
-    text-align: center;   
-    @include body-font-bold;   
-    @include fontSize(90px);
-    color: #ed65ff;
-}
-.attractions img {
-     max-width: 100%;
-    height: auto;   
+.restaurant-info ul li {
+    list-style-type: none;   
 }
 
-.restaurants h1 {
-    text-align: center;
-    margin: auto;
- //   margin-top: -50px;
-    @include fontSize(180px);
+.locations img {
     width: 100%;
 }
-.restaurants h2 {
-    margin: auto;
-    text-align: center;
-    @include headline-font;
-    @include fontSize(40px);
-    color: #d95858;
-}
-.restaurants img {
-    max-width: 960px;
-    width: 100%;
-}
-.nightlife iframe {
-    maring-left: 100px;
+
+.locations p {
     text-align: center;   
 }
+
+//main[role="main"] {
+//    @media (min-width: 700px) {
+//        float: right;
+//        width: 60%;
+//    }
+//}

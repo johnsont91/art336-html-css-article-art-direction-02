@@ -4,80 +4,10 @@ Base Rules
 */
 
 html {
-   // animation: colorchange-background 5s linear 1s infinite alternate;
+    animation: colorchange-background 5s linear 1s infinite alternate;
     background-color: $background-color;
     
 }
-// Parallax Elements
-
-body, html {
-    overflow: hidden;
-  }
-
-  body {
-    font: 100% / 1.5 Arial;
-    color: $color;
-    box-sizing: border-box;
-    @include body-font-regular;
-    @include fontSize(20px);
-    padding: 0 8px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-
-// Parallax Base Styles
-
-  .parallax {
-            height: 500px; /* fallback for older browsers */
-            height: 100vh;
-            overflow-x: hidden;
-            overflow-y: auto;
-            -webkit-perspective: 300px;
-            perspective: 300px;
-  }
-
-  .parallax__group {
-    position: relative;
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 4;
-  }
-
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2);
-    z-index: 3;
-  }
-
-  .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
-  }
-
-//END OF PARALLAX 
 
 body {
     color: $color;
@@ -96,26 +26,6 @@ h1, h2 {
     @include headline-font;
 }
 
-h3 {
-    text-align: center;
-    @include body-font-italic;
-    @include fontSize(30px);
-    margin-top: -50px;
-    padding: 5px;
-}
-
-identity-headline {
-    text-align: center;
-    width: 200px;
-    
-}
-
-.attraction-headline h1 {
-    text-align: left; 
-    @include fontSize(70px);
-    @include body-font-regular;
-    animation: colorchange-red 10s linear 1s infinite alternate;
-    transition: border 1000ms linear;
-    transition: color 1000ms linear;
+.banner-photo img {
     width: 100%;
 }

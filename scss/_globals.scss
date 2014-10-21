@@ -9,16 +9,11 @@ Globals
     @return #{$remSize}rem;
 }
 
-
-
 // Site variable
-$color: #fff;
-$background-color: #000;
-$background-color-alternate: #a3a3a3;
+$color: #242424;
+$background-color: #76ffd3;
+$background-color-alternate: #ededed;
 $background-center: #000;
-$menu-color: #ff27c3;
-$nightlife-color: #ff1934;
-$nightlife-color-alternate: #ff8b97;
 
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin fontSize($size) {
@@ -50,6 +45,10 @@ $nightlife-color-alternate: #ff8b97;
     font-weight: 400;
 }
 
+@mixin reversed-text {
+    background-color: $color;
+    color: $background-color;
+}
 @keyframes colorchange-background {
        0% { background-color: $background-color; }
        50% { background-color: $background-color-alternate; }
@@ -60,10 +59,4 @@ $nightlife-color-alternate: #ff8b97;
        0% { color: $background-color; }
        50% { color: $background-color-alternate; }
        100% { color: $background-color; }
-}
-
-@keyframes colorchange-red {
-       0% { color: $nightlife-color; }
-       50% { color: $nightlife-color-alternate; }
-       100% { color: $nightlife-color; }
 }

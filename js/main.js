@@ -27,6 +27,7 @@ $(function() {
             $('#banner-headline').bigtext();
             $('#restaurant-headline').bigtext();
             $('#banner-subline2').bigtext();
+            $('#facebook-headline').bigtext();
         }
     });
 });
@@ -36,12 +37,12 @@ $(function() {
 }); 
 
 
- /* $(document).ready(function(){
+  $(document).ready(function(){
     $(".toggle-button").next("ul").hide();
     $(".toggle-button").click(function(){
         $(".toggle-button").next("ul").slideToggle();
     });
-}); */
+}); 
 
 
  $(function () {

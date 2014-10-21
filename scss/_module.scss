@@ -3,25 +3,16 @@ Module Rules
     A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
     When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
 */
+
 .toggle-button {
       animation: colorchange-font 5s linear 1s infinite alternate;
-   // background-color: $color;
-  //  color: $background-color;
+    //background-color: $color;
+    //color: $background-color;
+        @include reversed-text;
     display: inline-block;
     @include headline-font;
-    @include fontSize(80px);
     padding: 0 4px;
     text-decoration: none;
-}
-.toggle-button svg path {
-    fill: $menu-color;
-    animation: colorchange-font 5s linear 1s infinite alternate;
-    transition: color 400ms linear;
-}
-
-.toggle-button a:hover svg path {
-    fill: darken($background-color, 12%);
-    transition: fill 400ms linear;
 }
 
 nav[role="navigation"] ul {
@@ -29,13 +20,12 @@ nav[role="navigation"] ul {
 }
 
 nav[role="navigation"] ul a {
-    border: 3px solid #71ffae;
-    color: #000;
-    display: inline-table;
-    @include fontSize(20px);
-    @include body-font-regular;
+    border: 1px solid $color;
+    color: $color;
+    display: inline-block;
+    @include fontSize(16px);
+    @include headline-font;
     margin-left: 8px;
-    margin-top: 4px;
     padding: 0 4px;
     text-decoration: none;
     transition: border 400ms linear;
@@ -44,110 +34,80 @@ nav[role="navigation"] ul a {
 
 nav[role="navigation"] ul a:hover {
     border: 1px solid lighten($color, 30%);   
-    color: lighten($menu-color, 30%);
+    color: lighten($color, 30%);
     transition: border 400ms linear;
     transition: color 400ms linear;
 }
-.banner-headline h1 {
-    @include headline-font;
-    @include fontSize(200px);
-    margin-top: -50px;
-    animation: colorchange-font 10s linear 1s infinite alternate;
-    transition: border 400ms linear;
-    transition: $menu-color 400ms linear;
-} 
 
-
-.banner-subline2 h4 {
-    @include headline-font;
-    @include fontSize(150px);
-    animation: colorchange-font 10s linear 1s infinite alternate;
-    transition: border 400ms linear;
-    transition: $nightlife-color 400ms linear;
-} 
-
-.attraction h1 {
-    @include headline-font;
-    @include fontSize(130px);
+header[role="banner"] {
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    //background-color: $color;
+    //color: $background-color;
+        @include reversed-text;
+    padding: 12px;
+    
 }
 
-.about ul li img {
-     border: 10px solid lighten($color, 0%);      
+header[role="banner"] h1 {
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    background-color: $color;
 }
 
-// Parallax Effect Element
-/*<!-- .debug {
-    position: fixed;
-    top: 0;
-    left: .5em;
-    z-index: 999;
-    background: rgba(0,0,0,.85);
-    color: #fff;
-    padding: .5em;
-    border-radius: 0 0 5px 5px;
-  }
-  .debug-on .parallax__group {
-    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
- }
-  .debug-on .parallax__layer {
-    box-shadow: 0 0 0 2px #000;
-    opacity: 0.9;
-  }
-  .parallax__group {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-  } */
+header[role="banner"] p {
+    @include fontSize(23px);
+}
 
-// Styling for the Parallaxing Groups
+header[role="banner"] a {
+    color: $background-color;  
+    @include body-font-italic;
+    transition: color 400ms linear;
+}
 
- #group1 {
-    z-index: 5; /* slide over group 2 */
-  }
-  #group1 .parallax__layer--base {
-   // background: rgb(102,204,102);
-  }
+header[role="banner"] a:hover {
+    color: darken($background-color, 12%);
+    transition: color 400ms linear;
+}
 
-  #group2 {
-    z-index: 3; /* slide under groups 1 and 3 */
-  }
-  #group2 .parallax__layer--back {
-   // background: rgb(0, 0, 0);
-  }
+.restaurant-headline h2 {
+    @include fontSize(60px);
+}   
 
+.locations h2 {
+    @include body-font-regular;
+    @include fontSize(50px);
+}
 
-  #group3 {
-    z-index: 4; /* slide over group 2 and 4 */
-  }
-  #group3 .parallax__layer--base {
-   // background: rgb(153,216,101);
-      text-align: center;
-  }
+.contact svg {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
 
-  #group4 {
-    z-index: 2; /* slide under group 3 and 5 */
-  }
-  #group4 .parallax__layer--deep {
-  //  background: rgb(181, 181, 181);
-  }
+.contact svg path {
+ 
+       fill: #b1b1b1;
+        transition: color 400ms linear;
+}
 
-  #group5 {
-    z-index: 3; /* slide over group 4 and 6 */
-  }
-  #group5 .parallax__layer--base {
-  //  background: rgb(141, 141, 141);
-  }
+.contact a:hover svg path {
+       fill: lighten($background-color, 70%);
+        transition: fill 400ms linear;
+}
 
-  #group6 {
-    z-index: 2; /* slide under group 5 and 7 */
-  }
-  #group6 .parallax__layer--back {
-  //  background: rgb(255, 255, 255);
-  }
+main[role="main"] h1 {
+        @include reversed-text;
+    //background-color: $color;
+    //color: $background-color;
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    padding: 0 8px;
+}
 
-  #group7 {
-    z-index: 3; /* slide over group 7 */
-  }
-  #group7 .parallax__layer--base {
-   // background: rgb(100, 100, 100);
-  }
+footer[role="contentinfo"] {
+    @include reversed-text;
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    //background-color: $color;
+    //color: $background-color;
+    @include body-font-italic;
+    line-height: 1;
+    padding: 4px 8px 8px 8px;
+}
